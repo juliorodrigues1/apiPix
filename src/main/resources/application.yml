@@ -1,0 +1,22 @@
+quarkus:
+  datasource:
+    db-kind: h2
+    jdbc:
+      url: jdbc:h2:mem:test
+    username: sa
+    password:
+
+  hibernate-orm:
+    database:
+      generation: update
+
+  #habilitar console h2
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+ms:
+  pix:
+    adapters:
+      RestApiBB/mp-rest/url: https://oauth.sandbox.bb.com.br/
