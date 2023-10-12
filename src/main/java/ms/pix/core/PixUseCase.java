@@ -1,8 +1,13 @@
 package ms.pix.core;
 
+import jakarta.ws.rs.core.Response;
+import ms.pix.models.PixCreate;
+
 import java.util.UUID;
 
 public interface PixUseCase {
 
-    void createPix(UUID id);
+    Response createPix(PixCreate pixCreate);
+
+    void generateToken();
 }

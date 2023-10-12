@@ -19,4 +19,9 @@ quarkus:
 ms:
   pix:
     adapters:
-      RestApiBB/mp-rest/url: https://oauth.sandbox.bb.com.br/
+#      TokenBB/mp-rest/url: https://oauth.sandbox.bb.com.br/
+#      RestPix/mp-rest/url: https://api.sandbox.bb.com.br/pix/v2/
+
+bb:
+  basic: ZXlKcFpDSTZJbVl5WmpKaU16TXRJaXdpWTI5a2FXZHZVSFZpYkdsallXUnZjaUk2TUN3aVkyOWthV2R2VTI5bWRIZGhjbVVpT2pjMU9UWXdMQ0p6WlhGMVpXNWphV0ZzU1c1emRHRnNZV05oYnlJNk1YMDpleUpwWkNJNklqazVaVGMyT1RNdE5EZzVaaTAwTWpSa0xUazJZVGt0TmpsbU9EVXdZekZpWVdZMVlXUmlabUptWXpVdE5HWWlMQ0pqYjJScFoyOVFkV0pzYVdOaFpHOXlJam93TENKamIyUnBaMjlUYjJaMGQyRnlaU0k2TnpVNU5qQXNJbk5sY1hWbGJtTnBZV3hKYm5OMFlXeGhZMkZ2SWpveExDSnpaWEYxWlc1amFXRnNRM0psWkdWdVkybGhiQ0k2TVN3aVlXMWlhV1Z1ZEdVaU9pSm9iMjF2Ykc5bllXTmhieUlzSW1saGRDSTZNVFk1TmpVNU5EYzVOalkyTW4w
+  gw-dev-app-key: 83400bd7a24e070c1c771a8e4f2b5653

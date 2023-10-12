@@ -1,18 +1,26 @@
 package ms.pix.controllers;
 
 import jakarta.inject.Inject;
-import jakarta.ws.rs.GET;
+import jakarta.ws.rs.Consumes;
+import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
-import ms.pix.infra.bb.BBPix;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import ms.pix.application.PixService;
+import ms.pix.models.PixCreate;
 
 @Path("/pix")
 public class PixController {
 
     @Inject
-    BBPix bbPix;
+    PixService pixService;
 
-    @GET
-    public void token(){
-        System.out.println(this.bbPix.generateToken());
+    @POST
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response token(PixCreate pixCreate){
+
+        return this.pixService.createPix(pixCreate);
     }
 }

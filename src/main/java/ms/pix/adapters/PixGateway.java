@@ -1,10 +1,10 @@
 package ms.pix.adapters;
 
-import java.util.UUID;
-
+import jakarta.ws.rs.core.Response;
+import ms.pix.models.PixCreate;
 public interface PixGateway {
 
-    void pixCreate(UUID id);
+    Response pixCreate(PixCreate pixCreate);
 
-    String generateToken();
+    void generateToken();
 }
