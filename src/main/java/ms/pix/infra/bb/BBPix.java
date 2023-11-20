@@ -6,7 +6,6 @@ import jakarta.ws.rs.WebApplicationException;
 import jakarta.ws.rs.core.MultivaluedHashMap;
 import jakarta.ws.rs.core.MultivaluedMap;
 
-import ms.pix.adapters.PixGateway;
 import ms.pix.adapters.RestPix;
 import ms.pix.adapters.TokenBB;
 import ms.pix.core.exceptions.TokenNotFoundException;
@@ -40,15 +39,12 @@ public class BBPix  {
         String txid = UUID.randomUUID().toString().replace("-", "");
 
         try {
-             Response response = this.restPix.createPix(txid, this.appKey, Token.token, pixCreate);
-            String responseBody = response.readEntity(String.class);
-            System.out.println("Corpo da Resposta: " + responseBody);
+           return  this.restPix.createPix(txid, this.appKey, Token.token, pixCreate);
+
         }catch (WebApplicationException e) {
             this.generateToken();
            return this.restPix.createPix(txid, this.appKey, Token.token, pixCreate);
         }
-
-        return null;
 
     }
 
